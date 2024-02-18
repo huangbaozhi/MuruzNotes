@@ -2,13 +2,13 @@
 ### 11、Qt如果一个信号的处理方法一直未被执行，有哪些可能性？
 断开了，连接的时候失败了，多线程的时候再排队或者启动了锁死。
 ### 12、在Qt5的信号处理中，如何使用lambda机制？
-信号定义了，但是不写对应的槽函数，直接将函数写到槽点位置。
+信号定义了，但是不写对应的槽函数，直接将函数写到槽的位置。
 ```C++
 connect(musicPlayer,SIGNAL(positionChanged(qint64)),this,SLOT(slotReflushStartTime(qint64)));
 connect(musicPlayer,SIGNAL(positionChanged(qint64)),SLOT(slotReflushStartTime(qint64)));
 ```
 ### 13、段错误一般是什么原因造成的，如何快速排查？
-一般是指针的问题，出现野指针空指针；用点灯活着Debug去排查问题。
+一般是指针的问题，出现野指针空指针；用点灯或者Debug去排查问题。
 ### 14、Qt三大核心机制：信号槽、元对象系统、事件模型
 #### 信号槽
 信号槽有五种连接方式；(参考第17题)
