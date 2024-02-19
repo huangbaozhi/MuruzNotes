@@ -290,5 +290,4 @@ void ExamDialog::getScore()
     else
         close();
 }
-
 ```
